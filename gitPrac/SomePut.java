@@ -2,7 +2,16 @@
 public class SomePut {
 
 	public static void main(String[] args) {
-		System.out.println("haha");
+		long[][] ret = new long[2][2];
+		long[][] o1 = new long[2][2];
+		long[][] o2 = new long[2][2];
+		
+		ret[0][0] = ((o1[0][0] * o2[0][0]) + (o1[0][1] * o2[1][0])) % mod;
+		ret[0][1] = ((o1[0][0] * o2[0][1]) + (o1[0][1] * o2[1][1])) % mod;
+		ret[1][0] = ((o1[1][0] * o2[0][0]) + (o1[1][1] * o2[1][0])) % mod;
+		ret[1][1] = ((o1[1][0] * o2[0][1]) + (o1[1][1] * o2[1][1])) % mod;
+		
+		return ret;
 	}
 
 }
